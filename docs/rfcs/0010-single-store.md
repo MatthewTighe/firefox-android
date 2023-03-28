@@ -146,3 +146,19 @@ Cons
 ## Prior art
 - [Store Scoping in Swift Composable Architecture](https://pointfreeco.github.io/swift-composable-architecture/main/documentation/composablearchitecture/store/scope(state:action:)/)
 - [Store slicing in Redux Toolkit](https://redux-toolkit.js.org/api/createSlice)
+
+
+# notes from christian
+- performance
+- dedicated thread. premature optimization? complexity in store (joinBlocking, ). were there big performance gains doing reductions on separate threads? jonathan was interested in cleaning up the threading.
+- 
+
+1. combine application store with browserstore
+2.
+
+- how does redux handle encapsulation? why could some component 
+- memory should be gc-able when relevant fragments go away
+- appstore and browserstore are both global so makes more sense to combine
+- combine substore's into local superstore instead? would need care in not adding local state to global state, but would solve memory issue. i think we are smart enough to handle not adding too much global state, as well. 
+
+- similar side-effects can be logically grouped into a single place. for example, all telemetry could be moved into a `TelemetryMiddleware` or all navigation events could be handled in a navigation middleware
