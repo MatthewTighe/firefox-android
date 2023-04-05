@@ -202,6 +202,14 @@ open class DefaultToolbarMenu(
         onItemTapped.invoke(ToolbarMenu.Item.NewTab)
     }
 
+    private val downloadAsPdfItem = BrowserMenuImageText(
+        context.getString(R.string.browser_menu_save_as_pdf),
+        R.drawable.ic_download,
+        primaryTextColor(),
+    ) {
+        onItemTapped.invoke(ToolbarMenu.Item.DownloadAsPdf)
+    }
+
     private val historyItem = BrowserMenuImageText(
         context.getString(R.string.library_history),
         R.drawable.ic_history,
@@ -364,6 +372,7 @@ open class DefaultToolbarMenu(
             listOfNotNull(
                 if (shouldUseBottomToolbar) null else menuToolbar,
                 newTabItem,
+                downloadAsPdfItem,
                 BrowserMenuDivider(),
                 bookmarksItem,
                 historyItem,

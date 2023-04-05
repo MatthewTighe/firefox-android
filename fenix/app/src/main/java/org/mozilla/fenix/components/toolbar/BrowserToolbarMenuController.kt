@@ -1,6 +1,3 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 package org.mozilla.fenix.components.toolbar
 
@@ -388,6 +385,12 @@ class DefaultBrowserToolbarMenuController(
                         .show()
                 }
             }
+            ToolbarMenu.Item.DownloadAsPdf -> {
+                // The item won't be available to be clicked if there isn't a selected tab since
+                // the menu is only available during browser sessions
+                val currentTabId = browserStore.state.selectedTabId ?: return
+                sessionUseCases.saveToPdf.invoke(currentTabId)
+            }
         }
     }
 
@@ -459,6 +462,8 @@ class DefaultBrowserToolbarMenuController(
                 Events.browserMenuAction.record(Events.BrowserMenuActionExtra("set_default_browser"))
             is ToolbarMenu.Item.RemoveFromTopSites ->
                 Events.browserMenuAction.record(Events.BrowserMenuActionExtra("remove_from_top_sites"))
+            ToolbarMenu.Item.DownloadAsPdf ->
+                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("save_as_pdf"))
         }
     }
 

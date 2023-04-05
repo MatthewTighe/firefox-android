@@ -803,6 +803,16 @@ class DefaultBrowserToolbarMenuControllerTest {
         verify { navController.navigate(turnOnSyncDirections, null) }
     }
 
+    @Test
+    fun `GIVEN selected tab WHEN download as pdf button clicked THEN use case is invoked`() = runTest {
+        val item = ToolbarMenu.Item.DownloadAsPdf
+        val controller = createController(scope = this, store = browserStore)
+
+        controller.handleToolbarItemInteraction(item)
+
+        verify { sessionUseCases.saveToPdf.invoke(selectedTab.id) }
+    }
+
     @Suppress("LongParameterList")
     private fun createController(
         scope: CoroutineScope,

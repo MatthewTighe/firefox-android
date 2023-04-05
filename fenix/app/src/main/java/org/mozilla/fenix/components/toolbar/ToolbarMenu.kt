@@ -35,6 +35,11 @@ interface ToolbarMenu {
         object History : Item()
         object Downloads : Item()
         object NewTab : Item()
+
+        /**
+         * Item representing an action to download the current page as a PDF.
+         */
+        object DownloadAsPdf : Item()
     }
 
     val menuBuilder: BrowserMenuBuilder

@@ -209,6 +209,8 @@
     <string name="browser_menu_add">Add</string>
     <!-- Browser menu label for editing a bookmark -->
     <string name="browser_menu_edit">Edit</string>
+    <!-- Browser menu label for saving as PDF -->
+    <string name="browser_menu_save_as_pdf">Save as PDF</string>
     <!-- Button shown on the home page that opens the Customize home settings -->
     <string name="browser_menu_customize_home_1">Customize homepage</string>
     <!-- Browser Toolbar -->
