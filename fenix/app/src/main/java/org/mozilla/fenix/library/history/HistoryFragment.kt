@@ -59,6 +59,7 @@ import org.mozilla.fenix.ext.setTextColor
 import org.mozilla.fenix.home.Mode
 import org.mozilla.fenix.library.LibraryPageFragment
 import org.mozilla.fenix.library.history.state.HistoryNavigationMiddleware
+import org.mozilla.fenix.library.history.state.HistorySyncMiddleware
 import org.mozilla.fenix.library.history.state.HistoryTelemetryMiddleware
 import org.mozilla.fenix.tabstray.Page
 import org.mozilla.fenix.utils.allowUndo
@@ -104,6 +105,11 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler, 
                     ),
                     HistoryTelemetryMiddleware(
                         isInPrivateMode = requireComponents.appStore.state.mode == Mode.Private,
+                    ),
+                    HistorySyncMiddleware(
+                        accountManager = requireContext().components.backgroundServices.accountManager,
+                        refreshView = { historyView.historyAdapter.refresh() },
+                        scope = lifecycleScope,
                     ),
                 ),
             )
