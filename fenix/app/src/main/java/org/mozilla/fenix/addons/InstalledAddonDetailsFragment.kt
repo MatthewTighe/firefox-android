@@ -258,7 +258,7 @@ class InstalledAddonDetailsFragment : Fragment() {
                 val directions = if (addon.installedState?.openOptionsPageInTab == true) {
                     val components = it.context.components
                     val shouldCreatePrivateSession =
-                        (activity as HomeActivity).browsingModeManager.mode.isPrivate
+                        components.appStore.state.mode.isPrivate
 
                     // If the addon settings page is already open in a tab, select that one
                     components.useCases.tabsUseCases.selectOrAddTab(

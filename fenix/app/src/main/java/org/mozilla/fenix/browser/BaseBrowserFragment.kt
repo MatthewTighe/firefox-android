@@ -120,6 +120,7 @@ import org.mozilla.fenix.browser.readermode.DefaultReaderModeController
 import org.mozilla.fenix.components.FenixSnackbar
 import org.mozilla.fenix.components.FindInPageIntegration
 import org.mozilla.fenix.components.StoreProvider
+import org.mozilla.fenix.components.appstate.AppAction
 import org.mozilla.fenix.components.metrics.MetricsUtils
 import org.mozilla.fenix.components.toolbar.BrowserFragmentState
 import org.mozilla.fenix.components.toolbar.BrowserFragmentStore
@@ -350,11 +351,12 @@ abstract class BaseBrowserFragment :
         val readerMenuController = DefaultReaderModeController(
             readerViewFeature,
             binding.readerViewControlsBar,
-            isPrivate = activity.browsingModeManager.mode.isPrivate,
+            isPrivate = requireComponents.appStore.state.mode.isPrivate,
             onReaderModeChanged = { activity.finishActionMode() },
         )
         val browserToolbarController = DefaultBrowserToolbarController(
             store = store,
+            appStore = requireComponents.appStore,
             tabsUseCases = requireComponents.useCases.tabsUseCases,
             activity = activity,
             navController = findNavController(),
@@ -368,7 +370,7 @@ abstract class BaseBrowserFragment :
                 findNavController().nav(
                     R.id.browserFragment,
                     BrowserFragmentDirections.actionGlobalTabsTrayFragment(
-                        page = when (activity.browsingModeManager.mode) {
+                        page = when (requireComponents.appStore.state.mode) {
                             BrowsingMode.Normal -> Page.NormalTabs
                             BrowsingMode.Private -> Page.PrivateTabs
                         },
@@ -1135,7 +1137,6 @@ abstract class BaseBrowserFragment :
 
     @VisibleForTesting
     internal fun observeRestoreComplete(store: BrowserStore, navController: NavController) {
-        val activity = activity as HomeActivity
         consumeFlow(store) { flow ->
             flow.map { state -> state.restoreComplete }
                 .distinctUntilChanged()
@@ -1144,7 +1145,7 @@ abstract class BaseBrowserFragment :
                         // Once tab restoration is complete, if there are no tabs to show in the browser, go home
                         val tabs =
                             store.state.getNormalOrPrivateTabs(
-                                activity.browsingModeManager.mode.isPrivate,
+                                requireComponents.appStore.state.mode.isPrivate,
                             )
                         if (tabs.isEmpty() || store.state.selectedTabId == null) {
                             navController.popBackStack(R.id.homeFragment, false)
@@ -1389,8 +1390,9 @@ abstract class BaseBrowserFragment :
      */
     @VisibleForTesting
     internal fun updateThemeForSession(session: SessionState) {
-        val sessionMode = BrowsingMode.fromBoolean(session.content.private)
-        (activity as HomeActivity).browsingModeManager.mode = sessionMode
+        requireComponents.appStore.dispatch(
+            AppAction.ModeChange(BrowsingMode.fromBoolean(session.content.private))
+        )
     }
 
     @VisibleForTesting

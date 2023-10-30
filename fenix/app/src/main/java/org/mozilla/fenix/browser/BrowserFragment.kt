@@ -96,7 +96,7 @@ class BrowserFragment : BaseBrowserFragment(), UserInteractionHandler {
             )
         }
 
-        val isPrivate = (activity as HomeActivity).browsingModeManager.mode.isPrivate
+        val isPrivate = components.appStore.state.mode.isPrivate
         val leadingAction = if (isPrivate && context.settings().feltPrivateBrowsingEnabled) {
             BrowserToolbar.Button(
                 imageDrawable = AppCompatResources.getDrawable(

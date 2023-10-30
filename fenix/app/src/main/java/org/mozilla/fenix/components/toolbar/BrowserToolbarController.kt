@@ -25,6 +25,8 @@ import org.mozilla.fenix.browser.BrowserAnimator.Companion.getToolbarNavOptions
 import org.mozilla.fenix.browser.BrowserFragmentDirections
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
 import org.mozilla.fenix.browser.readermode.ReaderModeController
+import org.mozilla.fenix.components.AppStore
+import org.mozilla.fenix.components.appstate.AppAction
 import org.mozilla.fenix.components.toolbar.interactor.BrowserToolbarInteractor
 import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.ext.nav
@@ -73,6 +75,7 @@ interface BrowserToolbarController {
 @Suppress("LongParameterList")
 class DefaultBrowserToolbarController(
     private val store: BrowserStore,
+    private val appStore: AppStore,
     private val tabsUseCases: TabsUseCases,
     private val activity: HomeActivity,
     private val navController: NavController,
@@ -172,13 +175,13 @@ class DefaultBrowserToolbarController(
                 }
             }
             is TabCounterMenu.Item.NewTab -> {
-                activity.browsingModeManager.mode = BrowsingMode.Normal
+                appStore.dispatch(AppAction.ModeChange(BrowsingMode.Normal))
                 navController.navigate(
                     BrowserFragmentDirections.actionGlobalHome(focusOnAddressBar = true),
                 )
             }
             is TabCounterMenu.Item.NewPrivateTab -> {
-                activity.browsingModeManager.mode = BrowsingMode.Private
+                appStore.dispatch(AppAction.ModeChange(BrowsingMode.Private))
                 navController.navigate(
                     BrowserFragmentDirections.actionGlobalHome(focusOnAddressBar = true),
                 )

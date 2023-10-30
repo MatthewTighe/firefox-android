@@ -17,6 +17,11 @@ enum class BrowsingMode {
      */
     val isPrivate get() = this == Private
 
+    val inverted get() = when(this) {
+        Private -> Normal
+        Normal -> Private
+    }
+
     companion object {
 
         /**
@@ -25,26 +30,4 @@ enum class BrowsingMode {
          */
         fun fromBoolean(isPrivate: Boolean) = if (isPrivate) Private else Normal
     }
-}
-
-interface BrowsingModeManager {
-    var mode: BrowsingMode
-}
-
-/**
- * Wraps a [BrowsingMode] and executes a callback whenever [mode] is updated.
- */
-class DefaultBrowsingModeManager(
-    private var _mode: BrowsingMode,
-    private val settings: Settings,
-    private val modeDidChange: (BrowsingMode) -> Unit,
-) : BrowsingModeManager {
-
-    override var mode: BrowsingMode
-        get() = _mode
-        set(value) {
-            _mode = value
-            modeDidChange(value)
-            settings.lastKnownMode = value
-        }
 }

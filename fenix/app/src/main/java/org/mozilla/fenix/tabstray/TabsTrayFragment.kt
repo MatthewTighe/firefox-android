@@ -173,7 +173,6 @@ class TabsTrayFragment : AppCompatDialogFragment() {
             tabsTrayStore = tabsTrayStore,
             browserStore = requireComponents.core.store,
             settings = requireContext().settings(),
-            browsingModeManager = activity.browsingModeManager,
             navController = findNavController(),
             navigateToHomeAndDeleteSession = ::navigateToHomeAndDeleteSession,
             navigationInteractor = navigationInteractor,
@@ -407,8 +406,6 @@ class TabsTrayFragment : AppCompatDialogFragment() {
         }
 
         if (!requireContext().settings().enableTabsTrayToCompose) {
-            val activity = activity as HomeActivity
-
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
                 fabButtonBinding.newTabButton.accessibilityTraversalAfter =
                     tabsTrayBinding.tabLayout.id
@@ -439,7 +436,7 @@ class TabsTrayFragment : AppCompatDialogFragment() {
                     tabLayout = tabsTrayBinding.tabLayout,
                     tabPager = tabsTrayBinding.tabsTray,
                     interactor = tabsTrayInteractor,
-                    browsingModeManager = activity.browsingModeManager,
+                    appStore = requireComponents.appStore,
                     tabsTrayStore = tabsTrayStore,
                 ),
                 owner = this,

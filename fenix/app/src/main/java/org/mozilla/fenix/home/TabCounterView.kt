@@ -17,8 +17,10 @@ import org.mozilla.fenix.GleanMetrics.StartOnHome
 import org.mozilla.fenix.NavGraphDirections
 import org.mozilla.fenix.R
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
-import org.mozilla.fenix.browser.browsingmode.BrowsingModeManager
+import org.mozilla.fenix.components.AppStore
+import org.mozilla.fenix.components.appstate.AppAction
 import org.mozilla.fenix.components.toolbar.FenixTabCounterMenu
+import org.mozilla.fenix.ext.components
 import org.mozilla.fenix.ext.nav
 import org.mozilla.fenix.ext.settings
 import org.mozilla.fenix.tabstray.Page
@@ -27,13 +29,13 @@ import org.mozilla.fenix.tabstray.Page
  * Helper class for building the [FenixTabCounterMenu].
  *
  * @property context An Android [Context].
- * @property browsingModeManager [BrowsingModeManager] used for fetching the current browsing mode.
+ * @property appStore Store for reading PBM state from and dispatching updates to.
  * @property navController [NavController] used for navigation.
  * @property tabCounter The [TabCounter] that will be setup with event handlers.
  */
 class TabCounterView(
     private val context: Context,
-    private val browsingModeManager: BrowsingModeManager,
+    private val appStore: AppStore,
     private val navController: NavController,
     private val tabCounter: TabCounter,
 ) {
@@ -42,7 +44,7 @@ class TabCounterView(
         val tabCounterMenu = FenixTabCounterMenu(
             context = context,
             onItemTapped = ::onItemTapped,
-            iconColor = if (browsingModeManager.mode == BrowsingMode.Private) {
+            iconColor = if (appStore.state.mode == BrowsingMode.Private) {
                 ContextCompat.getColor(context, R.color.fx_mobile_private_text_color_primary)
             } else {
                 null
@@ -50,7 +52,7 @@ class TabCounterView(
         )
 
         tabCounterMenu.updateMenu(
-            showOnly = when (browsingModeManager.mode) {
+            showOnly = when (appStore.state.mode) {
                 BrowsingMode.Normal -> BrowsingMode.Private
                 BrowsingMode.Private -> BrowsingMode.Normal
             },
@@ -67,7 +69,7 @@ class TabCounterView(
             navController.nav(
                 navController.currentDestination?.id,
                 NavGraphDirections.actionGlobalTabsTrayFragment(
-                    page = when (browsingModeManager.mode) {
+                    page = when (appStore.state.mode) {
                         BrowsingMode.Normal -> Page.NormalTabs
                         BrowsingMode.Private -> Page.PrivateTabs
                     },
@@ -83,7 +85,7 @@ class TabCounterView(
      * browsing mode.
      */
     fun update(browserState: BrowserState) {
-        val isPrivate = browsingModeManager.mode.isPrivate
+        val isPrivate = appStore.state.mode.isPrivate
         val tabCount = if (isPrivate) {
             browserState.privateTabs.size
         } else {
@@ -102,9 +104,9 @@ class TabCounterView(
      */
     internal fun onItemTapped(item: TabCounterMenu.Item) {
         if (item is TabCounterMenu.Item.NewTab) {
-            browsingModeManager.mode = BrowsingMode.Normal
+            appStore.dispatch(AppAction.ModeChange(BrowsingMode.Normal))
         } else if (item is TabCounterMenu.Item.NewPrivateTab) {
-            browsingModeManager.mode = BrowsingMode.Private
+            appStore.dispatch(AppAction.ModeChange(BrowsingMode.Private))
         }
     }
 }

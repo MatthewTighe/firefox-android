@@ -31,6 +31,8 @@ import org.mozilla.fenix.R
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
 import org.mozilla.fenix.components.FenixSnackbar
 import org.mozilla.fenix.components.StoreProvider
+import org.mozilla.fenix.components.appstate.AppAction
+import org.mozilla.fenix.components.components
 import org.mozilla.fenix.databinding.FragmentDownloadsBinding
 import org.mozilla.fenix.downloads.DynamicDownloadDialog
 import org.mozilla.fenix.ext.components
@@ -212,7 +214,7 @@ class DownloadFragment : LibraryPageFragment<DownloadItem>(), UserInteractionHan
     }
 
     private fun openItem(item: DownloadItem, mode: BrowsingMode? = null) {
-        mode?.let { (activity as HomeActivity).browsingModeManager.mode = it }
+        mode?.let { context?.components?.appStore?.dispatch(AppAction.ModeChange(it)) }
         context?.let {
             val contentLength = if (item.size.isNotEmpty()) {
                 item.size.toLong()

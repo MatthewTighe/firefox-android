@@ -26,6 +26,7 @@ import org.mozilla.fenix.GleanMetrics.SearchShortcuts
 import org.mozilla.fenix.GleanMetrics.UnifiedSearch
 import org.mozilla.fenix.HomeActivity
 import org.mozilla.fenix.R
+import org.mozilla.fenix.components.AppStore
 import org.mozilla.fenix.components.Core
 import org.mozilla.fenix.components.metrics.MetricsUtils
 import org.mozilla.fenix.crashes.CrashListActivity
@@ -66,6 +67,7 @@ interface SearchController {
 class SearchDialogController(
     private val activity: HomeActivity,
     private val store: BrowserStore,
+    private val appStore: AppStore,
     private val tabsUseCases: TabsUseCases,
     private val fragmentStore: SearchFragmentStore,
     private val navController: NavController,
@@ -180,7 +182,7 @@ class SearchDialogController(
             fragmentStore.dispatch(
                 SearchFragmentAction.AllowSearchSuggestionsInPrivateModePrompt(
                     text.isNotEmpty() &&
-                        activity.browsingModeManager.mode.isPrivate &&
+                        appStore.state.mode.isPrivate &&
                         settings.shouldShowSearchSuggestions &&
                         !settings.shouldShowSearchSuggestionsInPrivate &&
                         !settings.showSearchSuggestionsInPrivateOnboardingFinished,
@@ -259,7 +261,7 @@ class SearchDialogController(
                 fragmentStore.dispatch(
                     SearchFragmentAction.SearchDefaultEngineSelected(
                         engine = searchEngine,
-                        browsingMode = activity.browsingModeManager.mode,
+                        browsingMode = appStore.state.mode,
                         settings = settings,
                     ),
                 )
@@ -268,7 +270,7 @@ class SearchDialogController(
                 fragmentStore.dispatch(
                     SearchFragmentAction.SearchShortcutEngineSelected(
                         engine = searchEngine,
-                        browsingMode = activity.browsingModeManager.mode,
+                        browsingMode = appStore.state.mode,
                         settings = settings,
                     ),
                 )

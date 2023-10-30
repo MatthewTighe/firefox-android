@@ -143,7 +143,6 @@ data class SearchFragmentState(
  */
 @Suppress("LongParameterList")
 fun createInitialSearchFragmentState(
-    activity: HomeActivity,
     components: Components,
     tabId: String?,
     pastedText: String?,
@@ -167,7 +166,7 @@ fun createInitialSearchFragmentState(
         searchEngineSource = searchEngineSource,
         defaultEngine = null,
         showSearchSuggestions = shouldShowSearchSuggestions(
-            browsingMode = activity.browsingModeManager.mode,
+            browsingMode = components.appStore.state.mode,
             settings = settings,
         ),
         showSearchSuggestionsHint = false,
