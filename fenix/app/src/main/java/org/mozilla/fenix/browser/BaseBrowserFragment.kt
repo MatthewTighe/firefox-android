@@ -485,7 +485,6 @@ abstract class BaseBrowserFragment :
                 container = binding.browserLayout,
                 androidToolbarView = if (isToolbarAtBottom) browserToolbar else null,
                 menuButton = menuButton,
-                browsingModeManager = activity.browsingModeManager,
             )
         }
 

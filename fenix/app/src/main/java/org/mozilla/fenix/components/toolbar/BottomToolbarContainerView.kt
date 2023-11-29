@@ -30,7 +30,6 @@ import org.mozilla.fenix.theme.FirefoxTheme
  * @param navigationItems A list of [ActionItem] objects representing the items to be displayed in the navigation bar.
  * @param androidToolbarView An option toolbar view that will be added atop of the navigation bar.
  * @param menuButton A [MenuButton] to be used for [ItemType.MENU].
- * @param browsingModeManager A helper class that provides access to the current [BrowsingMode].
  *
  * Defaults to [NavigationItems.defaultItems] which provides a standard set of navigation items.
  */
@@ -40,13 +39,12 @@ class BottomToolbarContainerView(
     navigationItems: List<ActionItem> = NavigationItems.defaultItems,
     androidToolbarView: View? = null,
     menuButton: MenuButton,
-    browsingModeManager: BrowsingModeManager,
 ) {
 
     init {
         val composeView = ComposeView(context).apply {
             setContent {
-                val isPrivate = browsingModeManager.mode.isPrivate
+                val isPrivate = context.components.appStore.state.mode.isPrivate
                 val tabCount = context.components.core.store.observeAsState(initialValue = 0) { browserState ->
                     if (isPrivate) {
                         browserState.privateTabs.size
