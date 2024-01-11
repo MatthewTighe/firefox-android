@@ -10,6 +10,7 @@ import mozilla.components.service.pocket.PocketStory.PocketSponsoredStory
 import mozilla.components.service.pocket.ext.recordNewImpression
 import org.mozilla.fenix.browser.browsingmode.BrowsingMode
 import org.mozilla.fenix.components.AppStore
+import org.mozilla.fenix.components.appstate.home.SelectedTabInfo
 import org.mozilla.fenix.components.appstate.home.TabsTrayReducer
 import org.mozilla.fenix.components.appstate.home.ToolbarReducer
 import org.mozilla.fenix.components.appstate.home.WallpapersReducer
@@ -109,7 +110,7 @@ internal object AppStoreReducer {
             },
         )
         is AppAction.SelectedTabChanged -> state.copy(
-            selectedTabId = action.tab.id,
+            selectedTabInfo = SelectedTabInfo(action.tab.id, BrowsingMode.fromBoolean(action.tab.content.private)),
             mode = BrowsingMode.fromBoolean(action.tab.content.private),
         )
         is AppAction.DisbandSearchGroupAction -> state.copy(

@@ -55,7 +55,7 @@ class BrowserStoreBindingTest {
         appStore = spy(
             AppStore(
                 AppState(
-                    selectedTabId = tabId2,
+                    selectedTabInfo = tabId2,
                 ),
             ),
         )
