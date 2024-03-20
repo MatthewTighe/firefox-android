@@ -25,6 +25,7 @@ import mozilla.components.browser.engine.gecko.fetch.GeckoViewFetchClient
 import mozilla.components.browser.engine.gecko.permission.GeckoSitePermissionsStorage
 import mozilla.components.browser.icons.BrowserIcons
 import mozilla.components.browser.session.storage.SessionStorage
+import mozilla.components.browser.state.action.BrowserAction
 import mozilla.components.browser.state.engine.EngineMiddleware
 import mozilla.components.browser.state.engine.middleware.SessionPrioritizationMiddleware
 import mozilla.components.browser.state.search.SearchEngine
@@ -75,6 +76,7 @@ import mozilla.components.feature.webcompat.WebCompatFeature
 import mozilla.components.feature.webcompat.reporter.WebCompatReporterFeature
 import mozilla.components.feature.webnotifications.WebNotificationFeature
 import mozilla.components.lib.dataprotect.SecureAbove22Preferences
+import mozilla.components.lib.state.Middleware
 import mozilla.components.service.contile.ContileTopSitesProvider
 import mozilla.components.service.contile.ContileTopSitesUpdater
 import mozilla.components.service.digitalassetlinks.RelationChecker
@@ -96,6 +98,7 @@ import org.mozilla.fenix.BuildConfig
 import org.mozilla.fenix.Config
 import org.mozilla.fenix.IntentReceiverActivity
 import org.mozilla.fenix.R
+import org.mozilla.fenix.bindings.SelectedTabChangeMiddleware
 import org.mozilla.fenix.components.search.SearchMigration
 import org.mozilla.fenix.downloads.DownloadService
 import org.mozilla.fenix.ext.components
@@ -125,6 +128,7 @@ class Core(
     private val context: Context,
     private val crashReporter: CrashReporting,
     strictMode: StrictModeManager,
+    private val getStoreMiddleware: () -> Middleware<BrowserState, BrowserAction>
 ) {
     /**
      * The browser engine component initialized based on the build
@@ -307,7 +311,7 @@ class Core(
                     applicationSearchEngines = applicationSearchEngines,
                 ),
             ),
-            middleware = middlewareList + EngineMiddleware.create(
+            middleware = middlewareList + getStoreMiddleware() + EngineMiddleware.create(
                 engine,
                 // We are disabling automatic suspending of engine sessions under memory pressure.
                 // Instead we solely rely on GeckoView and the Android system to reclaim memory

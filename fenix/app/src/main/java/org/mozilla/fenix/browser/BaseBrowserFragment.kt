@@ -1287,9 +1287,9 @@ abstract class BaseBrowserFragment :
     }
 
     private fun handleTabSelected(selectedTab: TabSessionState) {
-        if (!this.isRemoving) {
-            updateThemeForSession(selectedTab)
-        }
+//        if (!this.isRemoving) {
+//            updateThemeForSession(selectedTab)
+//        }
 
         if (browserInitialized) {
             view?.let {
@@ -1484,11 +1484,11 @@ abstract class BaseBrowserFragment :
     /**
      * Set the activity normal/private theme to match the current session.
      */
-    @VisibleForTesting
-    internal fun updateThemeForSession(session: SessionState) {
-        val sessionMode = BrowsingMode.fromBoolean(session.content.private)
-        (activity as HomeActivity).browsingModeManager.mode = sessionMode
-    }
+//    @VisibleForTesting
+//    internal fun updateThemeForSession(session: SessionState) {
+//        val sessionMode = BrowsingMode.fromBoolean(session.content.private)
+//        (activity as HomeActivity).browsingModeManager.mode = sessionMode
+//    }
 
     @VisibleForTesting
     internal fun getCurrentTab(): SessionState? {

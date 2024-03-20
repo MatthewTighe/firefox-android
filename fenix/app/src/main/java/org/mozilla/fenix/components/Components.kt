@@ -7,6 +7,7 @@ package org.mozilla.fenix.components
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
+import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.app.NotificationManagerCompat
@@ -28,6 +29,7 @@ import org.mozilla.fenix.R
 import org.mozilla.fenix.autofill.AutofillConfirmActivity
 import org.mozilla.fenix.autofill.AutofillSearchActivity
 import org.mozilla.fenix.autofill.AutofillUnlockActivity
+import org.mozilla.fenix.bindings.SelectedTabChangeMiddleware
 import org.mozilla.fenix.components.appstate.AppState
 import org.mozilla.fenix.components.metrics.MetricsMiddleware
 import org.mozilla.fenix.datastore.pocketStoriesSelectedCategoriesDataStore
@@ -76,7 +78,9 @@ class Components(private val context: Context) {
         )
     }
     val services by lazyMonitored { Services(context, backgroundServices.accountManager) }
-    val core by lazyMonitored { Core(context, analytics.crashReporter, strictMode) }
+    val core by lazyMonitored { Core(context, analytics.crashReporter, strictMode) {
+        SelectedTabChangeMiddleware { getBuiltAppStore() }
+    } }
 
     @Suppress("Deprecation")
     val useCases by lazyMonitored {
@@ -239,8 +243,18 @@ class Components(private val context: Context) {
                 BrowsingModePersistenceMiddleware(
                     settings = settings,
                 ),
+//                ChangeDetectionMiddleware(
+//                    selector = { it.mode },
+//                    onChange = { action, pre, post ->
+//                       Log.i("tighe", "mode changed from $pre to $post with action $action")
+//                    },
+//                ),
             ),
         )
+    }
+
+    private fun getBuiltAppStore(): AppStore {
+        return appStore
     }
 
     val fxSuggest by lazyMonitored { FxSuggest(context) }

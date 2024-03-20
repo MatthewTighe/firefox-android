@@ -25,16 +25,16 @@ import mozilla.components.lib.state.State
  * @param selector A function to map from the State to the properties that are being inspected.
  * @param onChange A callback to react to changes to the properties defined by [selector].
  */
-class ChangeDetectionMiddleware<S : State, A : Action, T>(
+abstract class ChangeDetectionMiddleware<S : State, A : Action, T>(
     private val selector: (S) -> T,
-    private val onChange: (A, pre: T, post: T) -> Unit,
+    private val onChange: (A, preProp: T, postProp: T, preState: S, postState: S) -> Unit,
 ) : Middleware<S, A> {
     override fun invoke(context: MiddlewareContext<S, A>, next: (A) -> Unit, action: A) {
-        val pre = selector(context.store.state)
+        val (preProp, preState) = selector(context.store.state) to context.store.state
         next(action)
-        val post = selector(context.store.state)
-        if (pre != post) {
-            onChange(action, pre, post)
+        val (postProp, postState) = selector(context.store.state) to context.store.state
+        if (preProp != postProp) {
+            onChange(action, preProp, postProp, preState, postState)
         }
     }
 }

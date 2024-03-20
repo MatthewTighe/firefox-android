@@ -4,14 +4,19 @@
 
 package org.mozilla.fenix.bindings
 
+import android.util.Log
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.distinctUntilChangedBy
+import mozilla.components.browser.state.action.BrowserAction
+import mozilla.components.browser.state.action.TabListAction
+import mozilla.components.browser.state.selector.findTab
 import mozilla.components.browser.state.selector.selectedTab
 import mozilla.components.browser.state.state.BrowserState
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.lib.state.helpers.AbstractBinding
 import org.mozilla.fenix.components.AppStore
+import org.mozilla.fenix.components.ChangeDetectionMiddleware
 import org.mozilla.fenix.components.appstate.AppAction
 
 /**
@@ -33,5 +38,31 @@ class BrowserStoreBinding(
                     }
                 }
             }
+    }
+}
+
+class SelectedTabChangeMiddleware(
+    private val appStore: () -> AppStore,
+) : ChangeDetectionMiddleware<BrowserState, BrowserAction, String?>(
+    selector = { state -> state.selectedTabId },
+    onChange = { action, _, post, _, postState ->
+        // handle each action that can update the selected tab
+        Log.i("tighe", "selected tab changed top level. action: $action")
+        when (action) {
+            is TabListAction.RestoreAction -> Unit
+            else -> {
+                post?.let {
+                    postState.findTab(post)?.let {
+                        Log.i("tighe", "selected tab changed. mode: ${it.content.private}")
+                        appStore().dispatch(AppAction.SelectedTabChanged(it))
+                    }
+                }
+
+            }
+        }
+    }
+) {
+    init {
+        Log.i("tighe", "selected tab change middleware init")
     }
 }

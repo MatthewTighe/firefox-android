@@ -4,6 +4,7 @@
 
 package org.mozilla.fenix.browser.browsingmode
 
+import android.util.Log
 import org.mozilla.fenix.components.AppStore
 import org.mozilla.fenix.components.appstate.AppAction
 import org.mozilla.fenix.utils.Settings
@@ -47,6 +48,7 @@ class AppStoreBrowsingModeManagerWrapper(
     override var mode: BrowsingMode
         get() = appStore.state.mode
         set(value) {
+            Log.i("tighe", "browsing mode manager change to $value")
             appStore.dispatch(AppAction.ModeChange(value))
         }
 }
