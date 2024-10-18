@@ -48,13 +48,8 @@
     <!-- Content description on checkmark while tab is selected in multiselect mode in tab tray -->
     <string name="tab_tray_multiselect_selected_content_description">Sa naguit</string>
 
-    <!-- Home - Recently saved bookmarks -->
-    <!-- Title for the home screen section with recently saved bookmarks. -->
-    <string name="recently_saved_title">Hìaj nanu sà\'aj</string>
-    <!-- Content description for the button which navigates the user to show all of their saved bookmarks. -->
-    <string name="recently_saved_show_all_content_description_2">Gīni\'hiāj riña daran\' nej markado nū sa\'a</string>
     <!-- Text for the menu button to remove a recently saved bookmark from the user's home screen -->
-    <string name="recently_saved_menu_item_remove">Nādure\'</string>
+    <string name="home_bookmarks_menu_item_remove">Guxūn</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
     <string name="about_content">%1$s huin \’ngō sa giri Mozilla.</string>
@@ -87,6 +82,7 @@
     <string name="tcp_cfr_message">Ûta nùkuaj sa arán riña nej sa naga’nāj ‘hiaj ñûnj ndà aluan’ nïn dadin’ nu a’nïn gātū sa yī’ìi.</string>
     <!-- Text displayed that links to website containing documentation about the "Total cookie protection" feature. -->
     <string name="tcp_cfr_learn_more">Gini’in doj dàj hua rayi’î nej sa Arân riña nej Kokî rañu’ūnj un</string>
+
 
     <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
     <string name="camera_permissions_needed_message">Gārasunj kâmara. Gūij riña sa nagi’hiát si’hiaj Android , nī gārayina si gā’hue gārasunj sa ni’ña.</string>
@@ -123,9 +119,6 @@
     <string name="home_screen_shortcut_open_new_tab_2">Rakïj ñanj nakàa</string>
     <!-- Shortcut action to open new private tab -->
     <string name="home_screen_shortcut_open_new_private_tab_2">Rakïj ñaj nakà gārasun \'ngō rïn\'</string>
-
-    <!-- Shortcut action to open Passwords screens -->
-    <string name="home_screen_shortcut_open_password_screen">Riña hìo doj gūn’ riña màn da’nga’ huìi</string>
 
     <!-- Recent Tabs -->
     <!-- Header text for jumping back into the recent tab in the home screen -->
@@ -165,12 +158,8 @@
     <!-- Content description (not visible, for screen readers etc.): Stop loading current website -->
     <string name="browser_menu_stop">Gānikïn\'</string>
 
-    <!-- Browser menu button that opens the addon manager -->
-    <string name="browser_menu_add_ons">Sa gā\'ue nūtò\'</string>
     <!-- Browser menu button that opens account settings -->
     <string name="browser_menu_account_settings">Nuguan’ huā rayi’î kuênta</string>
-    <!-- Text displayed when there are no add-ons to be shown -->
-    <string name="no_add_ons">Nitāj sa gā\'ue nūtò\' mân hiūj nan</string>
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">Sa rūgûñu\'ūnj un</string>
 
@@ -186,8 +175,6 @@
     <string name="browser_menu_desktop_site">Si luguâ eskritôrio</string>
     <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
     <string name="browser_menu_add_to_homescreen">Nāchrūn riña pantayâ Ayi\'ìi</string>
-    <!-- Browser menu toggle that installs a Progressive Web App shortcut to the site on the device home screen. -->
-    <string name="browser_menu_install_on_homescreen">Gā\'nïnj</string>
     <!-- Content description (not visible, for screen readers etc.) for the Resync tabs button -->
     <string name="resync_button_content_description">Nāgi’hiaj nūguan’àn ñû</string>
     <!-- Browser menu button that opens the find in page menu -->
@@ -223,6 +210,7 @@
 
     <!-- Button shown on the home page that opens the Customize home settings -->
     <string name="browser_menu_customize_home_1">Nāgi’hiaj dà garan’ ruhuât riña paginâ ayi’ìt</string>
+
     <!-- Browser Toolbar -->
     <!-- Content description for the Home screen button on the browser toolbar -->
     <string name="browser_toolbar_home">Raga\' ayi\'ìt</string>
@@ -238,8 +226,6 @@
     <!-- Search Fragment -->
     <!-- Button in the search view that lets a user search by scanning a QR code -->
     <string name="search_scan_button">Nātsij hue\'ê</string>
-    <!-- Button in the search view that lets a user change their search engine -->
-    <string name="search_engine_button">Sa nana\'hui\'i</string>
     <!-- Button in the search view when shortcuts are displayed that takes a user to the search engine settings -->
     <string name="search_shortcuts_engine_settings">Sa nagi\'iaj sa nānà\'ui\'i</string>
     <!-- Button in the search view that lets a user navigate to the site in their clipboard -->
@@ -292,60 +278,33 @@
     <!-- Notification pre-permission dialog -->
     <!-- Enable notification pre permission dialog title
         The first parameter is the name of the app defined in app_name (for example: Fenix) -->
-    <string name="onboarding_home_enable_notifications_title">Gā’hue rūgûñu’ūnj nej nuguan’ rugui’ nan da’ nūtà’t doj sa gī’hiát riña %s</string>
+    <string name="onboarding_home_enable_notifications_title" moz:removedIn="124" tools:ignore="UnusedResources">Gā’hue rūgûñu’ūnj nej nuguan’ rugui’ nan da’ nūtà’t doj sa gī’hiát riña %s</string>
     <!-- Enable notification pre permission dialog description with rationale
         The first parameter is the name of the app defined in app_name (for example: Fenix) -->
-    <string name="onboarding_home_enable_notifications_description">Nāgi’hiaj nūguan’àn nej rakïj ñanj huā riña nej si āgâ’t, ni’hiāj nej nuguan’ huāa da’ gā’hue gāchē nu huìt riña %s’ nī nej doj sa huaa.</string>
+    <string name="onboarding_home_enable_notifications_description" moz:removedIn="124" tools:ignore="UnusedResources">Nāgi’hiaj nūguan’àn nej rakïj ñanj huā riña nej si āgâ’t, ni’hiāj nej nuguan’ huāa da’ gā’hue gāchē nu huìt riña %s’ nī nej doj sa huaa.</string>
     <!-- Text for the button to request notification permission on the device -->
-    <string name="onboarding_home_enable_notifications_positive_button">Guij ne\' ñaan</string>
+    <string name="onboarding_home_enable_notifications_positive_button" moz:removedIn="124" tools:ignore="UnusedResources">Guij ne\' ñaan</string>
     <!-- Text for the button to not request notification permission on the device and dismiss the dialog -->
-    <string name="onboarding_home_enable_notifications_negative_button">Sī ga\'hue akuan\' nïn</string>
+    <string name="onboarding_home_enable_notifications_negative_button" moz:removedIn="124" tools:ignore="UnusedResources">Sī ga\'hue akuan\' nïn</string>
 
-    <!-- Juno first user onboarding flow experiment, strings are marked unused as they are only referenced by Nimbus experiments. -->
-    <!-- Title for set firefox as default browser screen.
-        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
-    <string name="juno_onboarding_default_browser_title" moz:RemovedIn="117" tools:ignore="UnusedResources">Nā’nïnj %s da’ gāhuin man riña aché nana’hui’ yītïnjt</string>
-    <!-- Title for set firefox as default browser screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
-        Note: The word "Firefox" should NOT be translated -->
-    <string name="juno_onboarding_default_browser_title_nimbus" tools:ignore="UnusedResources">Nā’nïnj Firefox da’ gāhuin man riña aché nana’hui’ yītïnjt</string>
-    <!-- Description for set firefox as default browser screen.
-        The first parameter is the Firefox brand name.
-        The second parameter is the string with key "juno_onboarding_default_browser_description_link_text". -->
-    <string name="juno_onboarding_default_browser_description" moz:RemovedIn="117" tools:ignore="UnusedResources">Ñā’ān doj huin guìi riña %1$s ngà da’ san’ānj an yī’ì dan naran riña nej sa gā’hue nāga’nāj sò’.\n \nGīni’hiāj doj nùhuin si huā rayi’ij riña %2$s.</string>
-    <!-- Description for set firefox as default browser screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
-        Note: The word "Firefox" should NOT be translated -->
-    <string name="juno_onboarding_default_browser_description_nimbus" tools:ignore="UnusedResources">Ñā\’ān doj huin guìi riña Firefox ngà da\’ san’ānj an yī\’ì dan naran riña nej sa gā\’hue nāga\’nāj sò’.\n \nGīni\’hiāj doj nùhuin si huā rayi\’ij riña nej nuguan\' huā hiuj nan.</string>
     <!-- Text for the link to the privacy notice webpage for set as firefox default browser screen.
     This is part of the string with the key "juno_onboarding_default_browser_description". -->
-    <string name="juno_onboarding_default_browser_description_link_text" tools:ignore="UnusedResources">nuguan\' huì hūa rayi\'ij</string>
+    <string name="juno_onboarding_default_browser_description_link_text" moz:RemovedIn="124" tools:ignore="UnusedResources">nuguan\' huì hūa rayi\'ij</string>
     <!-- Text for the button to set firefox as default browser on the device -->
     <string name="juno_onboarding_default_browser_positive_button" tools:ignore="UnusedResources">Dūnâj gāhuin man riña sa nānà\'uì\' yītïnjt</string>
     <!-- Text for the button dismiss the screen and move on with the flow -->
     <string name="juno_onboarding_default_browser_negative_button" tools:ignore="UnusedResources">Sī ga\'hue akuan\' nïn</string>
-    <!-- Title for sign in to sync screen. -->
-    <string name="juno_onboarding_sign_in_title" tools:ignore="UnusedResources">Gachīn āsìj riña si tēlefonôt da’ gātūt riña aga’ sikà’ rà nīkājt</string>
-    <!-- Description for sign in to sync screen. -->
-    <string name="juno_onboarding_sign_in_description" tools:ignore="UnusedResources">Nākāj nej rakïj ñanj asi nej da’nga’ huì dunâjt riña a’ngô nej aga’a da’ gachē nunt hiūj nan.</string>
     <!-- Text for the button to sign in to sync on the device -->
     <string name="juno_onboarding_sign_in_positive_button" tools:ignore="UnusedResources">Gāyi\'ì sēsiûn</string>
     <!-- Text for the button dismiss the screen and move on with the flow -->
     <string name="juno_onboarding_sign_in_negative_button" tools:ignore="UnusedResources">Sī ga\'hue akuan\' nïn</string>
-    <!-- Title for enable notification permission screen.
-        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
-    <string name="juno_onboarding_enable_notifications_title" moz:RemovedIn="117" tools:ignore="UnusedResources">Gā’hue rūgûñu’ūnj nej nuguan’ rugui’ nan da’ nūtà’t doj sa gī’hiát riña %s</string>
-    <!-- Title for enable notification permission screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
-        Note: The word "Firefox" should NOT be translated -->
-    <string name="juno_onboarding_enable_notifications_title_nimbus" tools:ignore="UnusedResources">Gā’hue rūgûñu’ūnj nej nuguan’ rugui’ nan da’ nūtà’t doj sa gī’hiát riña Firefox</string>
-    <!-- Description for enable notification permission screen.
-        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
-    <string name="juno_onboarding_enable_notifications_description" moz:RemovedIn="117" tools:ignore="UnusedResources">Gā’hue gārasun nadunât nej rakïj ñanj riña nej si āgâ’t, nātsít nej sa nadunïnjt nī nārì’t hiūj nan nej nuguan’ rūgûñu’ūnj sò’ da’ gāche un hue’êt doj riña %s.</string>
-    <!-- Description for enable notification permission screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
-       Note: The word "Firefox" should NOT be translated   -->
-    <string name="juno_onboarding_enable_notifications_description_nimbus" tools:ignore="UnusedResources">Gā’hue gārasun nadunât nej rakïj ñanj riña nej si āgâ’t, nātsít nej sa nadunïnjt nī nārì’t hiūj nan nej nuguan’ rūgûñu’ūnj sò’ da’ gāche un hue’êt doj riña Firefox.</string>
     <!-- Text for the button to request notification permission on the device -->
     <string name="juno_onboarding_enable_notifications_positive_button" tools:ignore="UnusedResources">Nāchrūn nej nuguan’ atāj na’ānj an</string>
     <!-- Text for the button dismiss the screen and move on with the flow -->
     <string name="juno_onboarding_enable_notifications_negative_button" tools:ignore="UnusedResources">Sī ga\'hue akuan\' nïn</string>
+
+    <!-- Text for the button to dismiss the screen and move on with the flow -->
+    <string name="juno_onboarding_add_search_widget_negative_button" tools:ignore="UnusedResources">Sī ga\'hue akuan\' nïn</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -367,8 +326,6 @@
     <string name="preferences_category_about">Rayi\'î</string>
     <!-- Preference category for settings related to changing the default search engine -->
     <string name="preferences_category_select_default_search_engine">Nāguī ‘ngòj</string>
-    <!-- Preference for settings related to managing search shortcuts for the quick search menu -->
-    <string name="preferences_manage_search_shortcuts">Nākāj gīni’hiājt dàj hua rayi’î nej sa nīkāj sa nana’huî’t</string>
     <!-- Summary for preference for settings related to managing search shortcuts for the quick search menu -->
     <string name="preferences_manage_search_shortcuts_summary">Nādunā dàj gā riña nej sa nana’hui’i riña menú ‘na’ nej sa nana’hui’t</string>
     <!-- Preference category for settings related to managing search shortcuts for the quick search menu -->
@@ -378,8 +335,8 @@
     <!-- Preference for settings related to Search -->
     <string name="preferences_search">Nānà\'uì\'</string>
 
-    <!-- Preference for settings related to Search address bar -->
-    <string name="preferences_search_address_bar">Dukuán direksion</string>
+    <!-- Preference for settings related to Search engines -->
+    <string name="preferences_search_engines">Nej sa rugûñu’ūnj nana’huî’</string>
 
     <!-- Preference link to rating Fenix on the Play Store -->
     <string name="preferences_rate">Nāga\'uì\' du\'uej riña Google Play</string>
@@ -410,22 +367,10 @@
     <!-- Preference for enabling "HTTPS-Only" mode -->
     <string name="preferences_https_only_title">‘Hiaj sunj màn ngà HTTPS</string>
 
-    <!-- Preference for removing cookie/consent banners from sites automatically. See reduce_cookie_banner_summary for additional context. -->
-    <string name="preferences_cookie_banner_reduction">Nadugua\' si banêr kôki</string>
-    <!-- Preference for rejecting or removing as many cookie/consent banners as possible on sites. See reduce_cookie_banner_summary for additional context. -->
-    <string name="reduce_cookie_banner_option">Nādugua’ nej si banêr kôki</string>
-    <!-- Summary of cookie banner handling preference if the setting disabled is set to off -->
-    <string name="reduce_cookie_banner_option_off">Dūnâ\’àj</string>
-    <!-- Summary of cookie banner handling preference if the setting enabled is set to on -->
-    <string name="reduce_cookie_banner_option_on">Nāchrūn</string>
-    <!-- Summary for the preference for rejecting all cookies whenever possible. The first parameter is the application name -->
-    <string name="reduce_cookie_banner_summary_1">%1$s ruhuâ nārán mān’an riña nej kokî achín nì’hiaj nej si banêr kôki.</string>
     <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle -->
     <string name="reduce_cookie_banner_off_for_site">Nitāj si huā nî’nïn guendâ sitiô nan</string>
     <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
     <string name="cookie_banner_handling_details_site_is_not_supported_cancel_button">Dūyichin\'</string>
-    <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
-    <string name="cookie_banner_handling_details_site_is_not_supported_request_support_button" moz:RemovedIn="115" tools:ignore="UnusedResources">Gāchìnj man</string>
     <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
     <string name="cookie_banner_handling_details_site_is_not_supported_request_support_button_2">Gā’nïnj si nùguàn’t gān’an</string>
     <!-- Text for title indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
@@ -438,26 +383,8 @@
     <string name="reduce_cookie_banner_unsupported_site_request_submitted_2">Ngà gan\’ānj si nūguàn\’t  sa nutâ\'t</string>
     <!-- Text for indicating cookie banner handling is currently not supported for this site, this is shown as part of the protections panel with the tracking protection toggle -->
     <string name="reduce_cookie_banner_unsupported_site">Huā sa gāchin da’ gā’hue nāyi’nïn sitiô nan</string>
-    <!-- Title text for a detail explanation indicating cookie banner handling is on this site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is a shortened URL of the current site-->
-    <string name="reduce_cookie_banner_details_panel_title_on_for_site">Nachrūn sa nadugua’ nej si banêr nej kôki guendâ %1$s aj.</string>
-    <!-- Title text for a detail explanation indicating cookie banner handling is off this site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is a shortened URL of the current site-->
-    <string name="reduce_cookie_banner_details_panel_title_off_for_site">Dūnâ’àjt sa nadugua’ nej si banêr nej kôki guendâ %1$s aj</string>
     <!-- Title text for a detail explanation indicating cookie banner reducer didn't work for the current site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is the application name-->
     <string name="reduce_cookie_banner_details_panel_title_unsupported_site_request_2">%1$s na’hue gūxunj nej nuguan’ achín nì’hiaj nej kôki riña sitiô nan. Gā’hue gā’nïnjt ‘ngō nuguan’an riña sa nikāj ñu’ūnj sitiô nan.</string>
-    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is the application name -->
-    <string name="reduce_cookie_banner_details_panel_description_off_for_site">%1$s nādure’ man daran’ nej kokî ‘na’ riña sitiô nan nī nāgi’hiaj nàkaj pâjina. Si nādure’ej daran’ nej kôki nī gā’hue nāran si sēsiûnt asi nādure’ej nej sa ruhuât gīrānt.</string>
-    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is on for a site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is the application name -->
-    <string name="reduce_cookie_banner_details_panel_description_on_for_site_2">%1$s huin ruhuâj nāran riña daran’ nej kokî ahui riña nej sitiô gūñān huaa.</string>
-    <!-- Title text for the cookie banner re-engagement dialog. The first parameter is the application name. -->
-    <string name="reduce_cookie_banner_dialog_title">Gā’nïnt riña %1$s da’ sī ga’nïnj man gātū nej si banêr kôki aj.</string>
-    <!-- Body text for the cookie banner re-engagement dialog use. The first parameter is the application name. -->
-    <string name="reduce_cookie_banner_dialog_body">%1$s gā’hue nādure’ej daran’ nej si banêr kôki ruhuâ gātū.</string>
-    <!-- Remind me later text button for the onboarding dialog -->
-    <string name="reduce_cookie_banner_dialog_not_now_button">Sī ga\'hue Akuan\' nïn</string>
-    <!-- Snack text for the cookie banner dialog, after user hit the dismiss banner button -->
-    <string name="reduce_cookie_banner_dialog_snackbar_text">Gārán man riña nìko doj nej si solisitû kôki</string>
-    <!-- Change setting text button, for the cookie banner re-engagement dialog -->
-    <string name="reduce_cookie_banner_dialog_change_setting_button">Gā\'nïn</string>
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
     <string name="preferences_https_only_summary">Huin ruhuaj gātu riña nej sitio ngà ‘ngō da’nga’ gū’nàj HTTPS dadin’ dugumîn da’nga’ nan doj daran’ nej sa huā ‘hiát.</string>
@@ -481,16 +408,12 @@
     <string name="errorpage_httpsonly_message_summary">Si gūruhuaj nī, huā ‘ngō sa yī’ìi gatûj riña aga’ nan. Sisī huā nï̀n’ gīnunt riña sitiô nan nī, sī gachrûnt à’ngō nuguan’ gā’hue gārasun nej si da’ gī’hiaj yī’ì nej si sò’. Sisī huā nï̀n’ gīnunt hiūj nan don nī, gī’hiaj desaktivando akuan’ HTTPS.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Dàj gā gātū\'</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Servidor nagi\'iaj man\'ânt riña kuentâ Firefox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Servidor nagi\'iaj man\'ânt riña Sync</string>
-    <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Ngà  nadunâ servidor nikāj kuentâ Firefox ngà Sync. Naran riña aplikasiûn da\' natà\' sa nadunâ hua…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Kuênta</string>
     <!-- Preference for changing where the toolbar is positioned -->
-    <string name="preferences_toolbar">Dukuán nikāj sa gārāsun\'</string>
+    <string name="preferences_toolbar" moz:removedIn="129" tools:ignore="UnusedResources">Dukuán nikāj sa gārāsun\'</string>
 
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Têma</string>
@@ -502,8 +425,6 @@
     <string name="preferences_customize">Nādunō\' dàj huin ruhuô\'</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">Gāyi’ì sēsiûn da’ nāgi’hiaj nūguan’ànt nej rakïj ñanj, nej markadô, nej da’nga’ huìi nī doj sa huāa.</string>
-    <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Si kuendâ Firefox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Nātū nākà ñû da\' gānahuij nāgi\'iaj nūguàn\'anj</string>
     <!-- Preference for language -->
@@ -515,8 +436,6 @@
 
     <!-- Preference for developers -->
     <string name="preferences_remote_debugging">Guxūn sa kïj ï ngà USB</string>
-    <!-- Preference title for switch preference to show search engines -->
-    <string name="preferences_show_search_engines">Nāruguì’ nej sa nana’ui’i gīni’iājt</string>
     <!-- Preference title for switch preference to show search suggestions -->
     <string name="preferences_show_search_suggestions">Dīgân a\'ngô nuguan\' nikāj dugui\' ngà sa nana\'uî\'</string>
     <!-- Preference title for switch preference to show voice search button -->
@@ -552,9 +471,6 @@
     <!-- Message to indicate users that we are quitting the application to apply the changes -->
     <string name="quit_application">Gāhuī riña aplikasiûn nan da’ gā’hue nātū sa nākàa…</string>
 
-    <!-- Preference for add_ons -->
-    <string name="preferences_addons">Sa gā\'ue nūtò\'</string>
-
     <!-- Preference for notifications -->
     <string name="preferences_notifications">Sa atāj nan\'ānj an</string>
     <!-- Summary for notification preference indicating notifications are allowed -->
@@ -562,9 +478,6 @@
     <!-- Summary for notification preference indicating notifications are not allowed -->
     <string name="notifications_not_allowed_summary">Sī ga’hue gāchinj</string>
 
-    <!-- Add-on Preferences -->
-    <!-- Preference to customize the configured AMO (addons.mozilla.org) collection -->
-    <string name="preferences_customize_amo_collection">Riña màn nej sa nata’ nagi’hiaj mān’ânt</string>
     <!-- Button caption to confirm the add-on collection configuration -->
     <string name="customize_addon_collection_ok">GĀ’HUE</string>
     <!-- Button caption to abort the add-on collection configuration -->
@@ -575,14 +488,9 @@
     <!-- Hint displayed on input field for custom collection user ID-->
     <string name="customize_addon_collection_user_hint">Sisi’hiaj yi’nïn’ nan (ID si’hija si)</string>
 
-    <!-- Toast shown after confirming the custom add-on collection configuration -->
-    <string name="toast_customize_addon_collection_done">Nahuin nākà nej sa gā’hue nūtà’t doj. Gāhui akuanj riña aplikasiûn nan da’ nāhuin nākà riña man…</string>
-
     <!-- Customize Home -->
     <!-- Header text for jumping back into the recent tab in customize the home screen -->
     <string name="customize_toggle_jump_back_in">Gūej ñû</string>
-    <!-- Title for the customize home screen section with recently saved bookmarks. -->
-    <string name="customize_toggle_recent_bookmarks">Marcador nakà doj</string>
     <!-- Title for the customize home screen section with recently visited. Recently visited is
     a section where users see a list of tabs that they have visited in the past few days -->
     <string name="customize_toggle_recently_visited">Hìaj nākà gini’hiājt</string>
@@ -616,13 +524,13 @@
 
     <!-- Text for classic wallpapers title. The first parameter is the Firefox name. -->
     <string name="wallpaper_classic_title">Klâsiko %s</string>
-    <!-- Text for limited edition wallpapers title. -->
-    <string name="wallpaper_limited_edition_title">Sa ahui Nāsinùnj</string>
 
-    <!-- Description text for the limited edition wallpapers with learn more link. The first parameter is the learn more string defined in wallpaper_learn_more-->
-    <string name="wallpaper_limited_edition_description_with_learn_more">Yi’nïn’ nākà huā rayi’î nej si nūguàn’ nej duguî’ anïn ruhuâ hue’è. %s</string>
-    <!-- Description text for the limited edition wallpapers. -->
-    <string name="wallpaper_limited_edition_description">Yi’nïn’ nākà huā rayi’î nej si nūguàn’ nej duguî’ anïn ruhuâ hue’è.</string>
+    <!-- Text for artist series wallpapers title. "Artist series" represents a collection of artist collaborated wallpapers. -->
+    <string name="wallpaper_artist_series_title">Si dā’nga’ nej artîsta</string>
+    <!-- Description text for the artist series wallpapers with learn more link. The first parameter is the learn more string defined in wallpaper_learn_more. "Independent voices" is the name of the wallpaper collection -->
+    <string name="wallpaper_artist_series_description_with_learn_more">Yi’nïn’ huā rayi’î nej si nūguàn’ nej duguî’ anïn ruhuâ hue’ê. %s</string>
+    <!-- Description text for the artist series wallpapers. "Independent voices" is the name of the wallpaper collection -->
+    <string name="wallpaper_artist_series_description">Yi’nïn’ huā rayi’î nej si nūguàn’ nej duguî’ anïn ruhuâ hue’ê.</string>
     <!-- Wallpaper onboarding dialog header text. -->
     <string name="wallpapers_onboarding_dialog_title_text">Gārahuè ngà a’ngô kōlô</string>
     <!-- Wallpaper onboarding dialog body text. -->
@@ -630,12 +538,6 @@
 
     <!-- Wallpaper onboarding dialog learn more button text. The button navigates to the wallpaper settings screen. -->
     <string name="wallpapers_onboarding_dialog_explore_more_button_text">Gīni’hiāj doj dàj hua nej fondo huā da’ gīnu riña si pāntayât</string>
-
-    <!-- Add-on Installation from AMO-->
-    <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
-    <string name="addon_not_supported_error">Na’hue gāchīn sa ruhuât nūtà’t</string>
-    <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is already installed -->
-    <string name="addon_already_installed">Ngà nanun sa nutâ’t riña aga’ nan</string>
 
     <!-- Account Preferences -->
     <!-- Preference for managing your account via accounts.firefox.com -->
@@ -648,8 +550,6 @@
     <string name="preferences_sync_history">Sa gini\'iājt</string>
     <!-- Preference for syncing bookmarks -->
     <string name="preferences_sync_bookmarks">Nej sa râj sun nichrà\'t doj</string>
-    <!-- Preference for syncing logins -->
-    <string name="preferences_sync_logins">Nej riña ayi\'ìt sēsiûn</string>
 
     <!-- Preference for syncing tabs -->
     <string name="preferences_sync_tabs_2">Nej Rakïj ñanj huā nî\'nïnj ïn</string>
@@ -674,9 +574,6 @@
         The first parameter is the application name, the second is the device manufacturer name
         and the third is the device model. -->
     <string name="default_device_name_2">%1$s riña %2$s %3$s</string>
-
-    <!-- Preference for syncing credit cards -->
-    <string name="preferences_sync_credit_cards">Tarjetâ san\'ānj an</string>
 
     <!-- Preference for syncing addresses -->
     <string name="preferences_sync_address">Nej direksiûn</string>
@@ -752,7 +649,7 @@
     <!-- Preference for using the dynamic toolbar -->
     <string name="preference_gestures_dynamic_toolbar">Dūsiki’ da’ nāhuin huì dukuán sa màn rasūun</string>
     <!-- Preference for switching tabs by swiping horizontally on the toolbar -->
-    <string name="preference_gestures_swipe_toolbar_switch_tabs">Dūguaché ānèj ané dukuán màn rasūun da’ gā’hue nādunā rakïj ñanj</string>
+    <string name="preference_gestures_swipe_toolbar_switch_tabs" moz:removedIn="129" tools:ignore="UnusedResources">Dūguaché ānèj ané dukuán màn rasūun da’ gā’hue nādunā rakïj ñanj</string>
     <!-- Preference for showing the opened tabs by swiping up on the toolbar-->
     <string name="preference_gestures_swipe_toolbar_show_tabs">Dūguaché nāhuī dukuán màn rasūun da’ gā’hue nā’nï̄nt rakïj ñanj</string>
 
@@ -944,10 +841,10 @@
     <string name="collection_open_tabs">Nej Rakïj ñanj huā nî\'nïnj ïn</string>
     <!-- Hint for adding name of a collection -->
     <string name="collection_name_hint">Si yūgui yi’nïn’ nan</string>
-	<!-- Text for the menu button to rename a top site -->
-	<string name="rename_top_site">Nāchrūn a\'ngô si yūgui</string>
-	<!-- Text for the menu button to remove a top site -->
-	<string name="remove_top_site">Nādure\'</string>
+    <!-- Text for the menu button to rename a top site -->
+    <string name="rename_top_site">Nāchrūn a\'ngô si yūgui</string>
+    <!-- Text for the menu button to remove a top site -->
+    <string name="remove_top_site">Nādure\'</string>
     <!-- Text for the menu button to delete a top site from history -->
     <string name="delete_from_history">Nādure’ man riña ‘na’ sa gini’hiājt</string>
     <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
@@ -1223,7 +1120,7 @@
     <!-- Text for standard error snackbar dismiss button. -->
     <string name="standard_snackbar_error_dismiss">Si gi\'hiaj guendô\'</string>
     <!-- Text for error message when printing a page and it fails. -->
-    <string name="unable_to_print_error">Nu gā\'hue gīrij ñadu’hua</string>
+    <string name="unable_to_print_page_error">Nu gā’hue gīrij ñadu’hua ñanj nan</string>
     <!-- Text for the print feature in the share and browser menu -->
     <string name="menu_print">Gīrī ñadu’hua</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
@@ -1338,15 +1235,11 @@
     <string name="qr_scanner_dialog_invalid_ok">GĀ’HUE</string>
     <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
     <string name="tab_collection_dialog_message">Huā yītïnj ruhuât nādure\'t %1$s anj</string>
-    <!-- Collection and tab deletion prompt dialog message. This will show when the last tab from a collection is deleted -->
-    <string name="delete_tab_and_collection_dialog_message">Sisī nādurê’t rakïj ñanj nan nī, nārè da’ huā ngè koleksiôn. Gā’hue nāgi’hiát a’ngô koleksiôn ahuin mān’an diû garan’ ruhuât.</string>
-    <!-- Collection and tab deletion prompt dialog title. Placeholder will be replaced with the collection name. This will show when the last tab from a collection is deleted -->
-    <string name="delete_tab_and_collection_dialog_title">Nādurê\'t %1$s raj</string>
     <!-- Tab collection deletion prompt dialog option to delete the collection -->
     <string name="tab_collection_dialog_positive">Nādūre\'</string>
 
     <!-- Text displayed in a notification when the user enters full screen mode -->
-    <string name="full_screen_notification">Hiàj nanunj da\' huā ngè riña aga\'a</string>
+    <string name="full_screen_notification" moz:removedIn="130" tools:ignore="UnusedResources">Hiàj nanunj da\' huā ngè riña aga\'a</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">Ngà naka URL</string>
     <!-- Sample text for accessibility font size -->
@@ -1370,12 +1263,13 @@
     <string name="preferences_delete_browsing_data_tabs_subtitle">%d nej rakïj ñanj</string>
 
     <!-- Title for the data and history items in Delete browsing data -->
-    <string name="preferences_delete_browsing_data_browsing_data_title">Sa gini\'iājt ngà gaché nunt nī si datô nej sîtio</string>
+    <!-- Title for the history item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_browsing_history_title">Nej sa gini\'iājt ngà gaché nunt</string>
     <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
         number of history items the user has -->
     <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d nej direksiûn</string>
-    <!-- Title for the cookies item in Delete browsing data -->
-    <string name="preferences_delete_browsing_data_cookies">Nej kôki</string>
+    <!-- Title for the cookies and site data items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies_and_site_data">Nej kôki ni nej si datô sîtio</string>
     <!-- Subtitle for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies_subtitle">Gānarán sēsiûn riña gà\'ì nej sîtio</string>
     <!-- Title for the cached images and files item in Delete browsing data -->
@@ -1432,64 +1326,10 @@
     <string name="delete_history_group_snackbar">Ngà nare’ grûpo</string>
 
     <!-- Onboarding -->
-    <!-- Text for onboarding welcome header. -->
-    <string name="onboarding_header_2">Guruhuât gunumânt riña internêt ‘hiaj sun hue’ê doj nan</string>
-    <!-- Text for the onboarding welcome message. -->
-    <string name="onboarding_message">Guendâ guìi gurugui’ sa nana’hui’ nan, sê guendâ gīrij san’ānj an huin man.</string>
-    <!-- Text for the Firefox account onboarding sign in card header. -->
-    <string name="onboarding_account_sign_in_header">Nakāj danè’ gudunâjt</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. -->
-    <string name="onboarding_manual_sign_in_description">Nāgi’hiaj nūguan’àn nej rakïj ñanj nī nej da’nga’ huì huā riña nej si āgâ’t da’ gā’hue nādunāt pāntâya.</string>
-    <!-- Text for the button to manually sign into Firefox account. -->
-    <string name="onboarding_firefox_account_sign_in">Gāyi\'ì sēsiûn</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Ngà nanûn Sync</string>
-    <!-- Text for the tracking protection onboarding card header -->
-    <string name="onboarding_tracking_protection_header">Sa ‘na’ niñā da’ dūgumîn sò’ da’ gāchē nun huìt</string>
-    <!-- Text for the tracking protection card description. The first parameter is the name of the application.-->
-    <string name="onboarding_tracking_protection_description_old">Rugûñu’ūnj %1$s narán man riña nej hue’ yīru’hue nikò’ sò’ riña web.</string>
-    <!-- Text for the tracking protection card description. -->
-    <string name="onboarding_tracking_protection_description">Nīka nej san arán riña nej kôki da’ nāran riña nej kôki gā’hue nāga’nāj sò’ riña nej sîtio.</string>
-    <!-- text for tracking protection radio button option for standard level of blocking -->
-    <string name="onboarding_tracking_protection_standard_button_2">Sa huā chre\' (dàj huaj \'naj)</string>
-    <!-- text for standard blocking option button description -->
-    <string name="onboarding_tracking_protection_standard_button_description_3">Nda hue\'ê chre huaj da\' gī\hiaj sunj nī dūguminj da\’ gāchē nun huìt. Nej pâjina nī nayi\'nïn riña man dàj rû\' \'hiaj yitïn.</string>
-    <!-- text for tracking protection radio button option for strict level of blocking -->
-    <string name="onboarding_tracking_protection_strict_option">Sa nùkuaj doj</string>
-    <!-- text for strict blocking option button description -->
-    <string name="onboarding_tracking_protection_strict_button_description_3">Naran riña nej sa naga’nāj a da’ nāyi’nï̄n hìo doj riña nej pâjina, sanī huā da’āj nej suun gā’hue gāhui a’nan’.</string>
-    <!-- text for the toolbar position card header  -->
-    <string name="onboarding_toolbar_placement_header_1">Nānà’huì’ riña ginun dukuá ‘na’ nej rasūun</string>
-    <!-- Text for the toolbar position card description -->
-    <string name="onboarding_toolbar_placement_description">Dūnâj man ginùn man ne’ rīki asi dūguachîn man gān’an ne’ ràa.</string>
-    <!-- Text for the privacy notice onboarding card header -->
-    <string name="onboarding_privacy_notice_header_1">Sò’ ni’in dàj gī’hiaj sunt ngà nej si datôt</string>
-    <!-- Text for the privacy notice onboarding card description. -->
-    <string name="onboarding_privacy_notice_description">Narikî Firefox da’ gi’nï̄nj ra’ât nej sa duyingâ’t riña aché nunt nī nej sa duyingâ’t ngà nej ñûnj.</string>
-    <!-- Text for the button to read the privacy notice -->
-    <string name="onboarding_privacy_notice_read_button">Gahiā sa atāj na\'ānj ñûnj guendâ sa huìi</string>
-
-    <!-- Text for the conclusion onboarding message -->
-    <string name="onboarding_conclusion_header">Ngà huā yūguît da’ gāyi’ìt gī’hiaj sunt ngà ‘ngō internet nākàa bè’ej.</string>
-    <!-- text for the button to finish onboarding -->
-    <string name="onboarding_finish">Gāyi\'ì gāchē nunt</string>
 
     <!-- Onboarding theme -->
-    <!-- text for the theme picker onboarding card header -->
-    <string name="onboarding_theme_picker_header">Nāguī si temât</string>
-    <!-- text for the theme picker onboarding card description -->
-    <string name="onboarding_theme_picker_description_2">Dūgumî dòj ña\'an arâj sun si āgâ\'t ngà rune ñant si nāchrūnt gā rūmī\' riña si āgâ\'t.</string>
-    <!-- Automatic theme setting (will follow device setting) -->
-    <string name="onboarding_theme_automatic_title">Sa nañû ma\'an</string>
-    <!-- Summary of automatic theme setting (will follow device setting) -->
-    <string name="onboarding_theme_automatic_summary">Nakāj dugui\'ij ngà daj hua riña si āgâ\'t</string>
-
-    <!-- Theme setting for dark mode -->
-    <string name="onboarding_theme_dark_title">Temâ huā rūmin\'in</string>
-
-    <!-- Theme setting for light mode -->
-    <string name="onboarding_theme_light_title">Temâ huā yigiïn</string>
-
     <!-- Text shown in snackbar when multiple tabs have been sent to device -->
     <string name="sync_sent_tabs_snackbar">Nej rakïj ñanj ngà gan\'ānj</string>
     <!-- Text shown in snackbar when one tab has been sent to device  -->
@@ -1574,7 +1414,7 @@
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom_cryptominers">Nej kriptominêro</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
-    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Nej da\'nga\' rā\'a</string>
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters" moz:RemovedIn="130" tools:ignore="UnusedResources">Nej da\'nga\' rā\'a</string>
     <!-- Button label for navigating to the Enhanced Tracking Protection details -->
     <string name="enhanced_tracking_protection_details">A\'ngô nej sa nika</string>
     <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
@@ -1601,9 +1441,9 @@
     <!-- Description of cryptominers that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_cryptominers_description">Nu â\'nïn riña nej skripts yi\'ìi da\' gātū nej man riña si āgâ\'t nī gīrī nej man san\'ānj nānèe.</string>
     <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
-    <string name="etp_fingerprinters_title">Nej sa nani\'in nej da\'nga\' rā\'a</string>
+    <string name="etp_fingerprinters_title" moz:RemovedIn="130" tools:ignore="UnusedResources">Nej sa nani\'in nej da\'nga\' rā\'a</string>
     <!-- Description of fingerprinters that can be blocked by Enhanced Tracking Protection -->
-    <string name="etp_fingerprinters_description">Nu â\'nïn da\' sī nari a\'ngô sa yi\'ìi nej nuguan\' nīkāj si āgâ\'t nī ga\'ue nāga\'nāj nej man sò\'.</string>
+    <string name="etp_fingerprinters_description" moz:RemovedIn="130" tools:ignore="UnusedResources">Nu â\'nïn da\' sī nari a\'ngô sa yi\'ìi nej nuguan\' nīkāj si āgâ\'t nī ga\'ue nāga\'nāj nej man sò\'.</string>
     <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_tracking_content_title">Sa nīkāj sa naga\'nāj a</string>
 
@@ -1683,10 +1523,6 @@
     <!-- Describes the add to homescreen functionality -->
     <string name="add_to_homescreen_description_2">Gā\'hue nāchrūnt sitiô nan riña pajinâ ayi\'ìt riña aga\' sikà\' rà nīkājt da\' ga\'hue hìo gātūt riñanj dàj rû\' \'hiaj \'ngō aplikāsiûn.</string>
 
-    <!-- Preference for managing the settings for logins and passwords in Fenix -->
-    <string name="preferences_passwords_logins_and_passwords">Nej riña gayi\'ìt sēsiûn nī nej da\'nga\' huìi</string>
-    <!-- Preference for managing the saving of logins and passwords in Fenix -->
-    <string name="preferences_passwords_save_logins">Nā\'nïnj sà\' nej riña gayi\'ìt sēsiûn nī nej da\'nga\' huìi</string>
     <!-- Preference option for asking to save passwords in Fenix -->
     <string name="preferences_passwords_save_logins_ask_to_save">Gāchìnj nì\'iaj nā\'nïnj sà\'t</string>
     <!-- Preference option for never saving passwords in Fenix -->
@@ -1701,30 +1537,11 @@
 
     <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill_description">Nāchra nāhuij nej si yūgui sa arâj suun ngà nej da’nga’ huìi riña na’ngô nej aplikasiûn riña si āgâ’t nan.</string>
-    <!-- Preference option for adding a login -->
-    <string name="preferences_logins_add_login">Nutà’ sa ayi’ìt sesión </string>
 
-    <!-- Preference for syncing saved logins in Fenix -->
-    <string name="preferences_passwords_sync_logins">Nāgi\'iaj nūguàn\'àn nej riña ayì\'ìt sēsiûn</string>
-
-    <!-- Preference for syncing saved logins in Fenix, when not signed in-->
-    <string name="preferences_passwords_sync_logins_across_devices">Nāgi’hiaj nūguan’àn nej riña ayi’ìt sēsiûn riña nej si āgâ’t</string>
-    <!-- Preference to access list of saved logins -->
-    <string name="preferences_passwords_saved_logins">Sa gayi\'ìt sesiûn ngà naginu sà\'</string>
-    <!-- Description of empty list of saved passwords. Placeholder is replaced with app name.  -->
-    <string name="preferences_passwords_saved_logins_description_empty_text">Nej riña gayi\'ìt sēsiûn asi rña nagi\'iaj nūguà\'ànt man ngà %s gūruguì\' hiūj nan gīni\'iājt.</string>
-    <!-- Preference to access list of saved logins -->
-    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Gāhuin chrūn doj rayi\'î Sync.</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Sa huā gi\'iát</string>
-    <!-- Empty description of list of login exceptions that we never save logins for -->
-    <string name="preferences_passwords_exceptions_description_empty">Hiūj nan gūruguì\' nej riña gayì\'ìt sēsiûn ngà nej da\'nga\' huì na\'nïn sà\'t.</string>
-    <!-- Description of list of login exceptions that we never save logins for -->
-    <string name="preferences_passwords_exceptions_description">Sê sī nānun sà\' nej riña gayi\'ît sēsiûn nī nej da\'nga\' huìi guiendâ nej sitiô nan.</string>
     <!-- Text on button to remove all saved login exceptions -->
     <string name="preferences_passwords_exceptions_remove_all">Nādure’ daran’ nej sa nitāj si ni’ñānj an</string>
-    <!-- Hint for search box in logins list -->
-    <string name="preferences_passwords_saved_logins_search">Nānà\'uì\' nej riña gayi\'ît sēsiûn</string>
     <!-- The header for the site that a login is for -->
     <string name="preferences_passwords_saved_logins_site">Sîtio</string>
     <!-- The header for the username for a login -->
@@ -1754,13 +1571,7 @@
 
     <!-- Content Description (for screenreaders etc) read for the button to hide a password in logins -->
     <string name="saved_login_hide_password">Da\'nga\' huì huā huìi</string>
-    <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their logins -->
-    <string name="logins_biometric_prompt_message">Gā\'nïn riñanj da\' ga\'ue ni\'iājt nej riña gayì\'ìt sēsiûn na\'nïn sà\'t</string>
-    <!-- Title of warning dialog if users have no device authentication set up -->
-    <string name="logins_warning_dialog_title">Nāgi\'iaj ran riña gayì\'ìt sēsiûn nī nej da\'nga\' huì nīkājt</string>
 
-    <!-- Message of warning dialog if users have no device authentication set up -->
-    <string name="logins_warning_dialog_message">Nāchrūn \'ngō da\'nga\' huì duyâ ra\'ât riña si āgâ\'t, \'ngō PIN asi \'ngō da\'nga\' huì achrûnt da\' si ga\'ue gīni\'iāj nej duguî\' riñā rûgûñu\'ūnjt si āgâ\'t nej riña gayì\'ìt sēsiûn asi nej da\'nga\' huì màn sà\' \'iát.</string>
     <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
     <string name="logins_warning_dialog_later">Ne\' rūkù doj</string>
 
@@ -1778,39 +1589,20 @@
     <!-- Saved logins sorting strategy menu item -by last used- (if selected, it will sort saved logins by last used) -->
     <string name="saved_logins_sort_strategy_last_used">Āmān garâj sun rūkù nï\'t</string>
 
-    <!-- Content description (not visible, for screen readers etc.): Sort saved logins dropdown menu chevron icon -->
-    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Nāgi\'iaj hue\'ê riña menú gayì\'ìt sēsiûn</string>
-
     <!-- Autofill -->
     <!-- Preference and title for managing the autofill settings -->
     <string name="preferences_autofill">Nāchra man\'an</string>
     <!-- Preference and title for managing the settings for addresses -->
     <string name="preferences_addresses">Nej direksiûn</string>
-    <!-- Preference and title for managing the settings for credit cards -->
-    <string name="preferences_credit_cards">Tarjetâ san\'ānj an</string>
 
-    <!-- Preference for saving and autofilling credit cards -->
-    <string name="preferences_credit_cards_save_and_autofill_cards">Nā’nïn sà’ nī nachra mā’an riña tārjêta</string>
-
-    <!-- Preference summary for saving and autofilling credit card data -->
-    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Ngà huā chì’ nej nuguan’an da’ gārasunt</string>
     <!-- Preference option for syncing credit cards across devices. This is displayed when the user is not signed into sync -->
     <string name="preferences_credit_cards_sync_cards_across_devices">Nāgi’hiaj nūguan’àn nej si tarjetât riña nej si āgâ’t</string>
     <!-- Preference option for syncing credit cards across devices. This is displayed when the user is signed into sync -->
     <string name="preferences_credit_cards_sync_cards">Nej tarjeta ngà nahuin nūguan’àan</string>
-    <!-- Preference option for adding a credit card -->
-    <string name="preferences_credit_cards_add_credit_card">Nūtà’ a’ngô tarjeta san’ānj an</string>
-    <!-- Preference option for managing saved credit cards -->
-    <string name="preferences_credit_cards_manage_saved_cards">Gi’nï̄nj ra’a nej tarjeta ngà nūn sà’a</string>
     <!-- Preference option for adding an address -->
     <string name="preferences_addresses_add_address">Nūtà’ a’ngô dīreksiûn</string>
     <!-- Preference option for managing saved addresses -->
     <string name="preferences_addresses_manage_addresses">Ni’hiāj dàj gā nej dīreksiûn</string>
-    <!-- Preference for saving and autofilling addresses -->
-    <string name="preferences_addresses_save_and_autofill_addresses">Nā’nïn sà’ nī nachra mā’an riña nej dīreksiûn</string>
-
-    <!-- Preference summary for saving and autofilling address data -->
-    <string name="preferences_addresses_save_and_autofill_addresses_summary">Gāchrūn nuguan’ achin dàj rû’ nej número, kōrrêo nī dàj gū’nàj riña gùchij</string>
 
     <!-- Title of the "Add card" screen -->
     <string name="credit_cards_add_card">Nūtà’ a’ngô tarjeta</string>
@@ -1830,8 +1622,6 @@
     <string name="credit_cards_menu_delete_card">Nādure’ tarjeta</string>
     <!-- The text for the "Delete card" button for deleting a credit card -->
     <string name="credit_cards_delete_card_button">Nādure’ tarjeta</string>
-    <!-- The text for the confirmation message of "Delete card" dialog -->
-    <string name="credit_cards_delete_dialog_confirmation">Huā yītïnj ruhuât nādure\'t tarjeta nan anj.</string>
     <!-- The text for the positive button on "Delete card" dialog -->
     <string name="credit_cards_delete_dialog_button">Nādūre\'</string>
     <!-- The title for the "Save" menu item for saving a credit card -->
@@ -1842,36 +1632,20 @@
     <string name="credit_cards_cancel_button">Dūyichin\'</string>
     <!-- Title of the "Saved cards" screen -->
     <string name="credit_cards_saved_cards">Nej tarjeta ngà nū sà’a</string>
-    <!-- Error message for credit card number validation -->
-    <string name="credit_cards_number_validation_error_message">Gī\'hiaj \'ngō sunūj u nī gāchrūn da\'nga’ nīkāj si tarjetât</string>
-    <!-- Error message for credit card name on card validation -->
-    <string name="credit_cards_name_on_card_validation_error_message">Nāchra hiūj nan gī\'hiát \‘ngō sunūj u</string>
     <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their saved credit cards -->
     <string name="credit_cards_biometric_prompt_message">Gā\'nïn riñanj da\' gā\'hue gini\'hiājt riña nū sà\' nej si tarjetât</string>
-    <!-- Title of warning dialog if users have no device authentication set up -->
-    <string name="credit_cards_warning_dialog_title">Nāgi’hiaj ran yi’î nej si tarjetât</string>
-    <!-- Message of warning dialog if users have no device authentication set up -->
-    <string name="credit_cards_warning_dialog_message">Nāchrūn \'ngō da\'nga\' huì duyâ ra\'ât riña si āgâ\'t, \'ngō PIN asi \'ngō da\'nga\' huì achrûnt da\' si ga\'hue gīni\'hiāj nej duguî\' riñā rûgûñu\'ūnjt si āgâ\'t nej riña màn si tarjetât.</string>
     <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
     <string name="credit_cards_warning_dialog_set_up_now">À\' \'ngō nāgi\'iát riñanj</string>
     <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
     <string name="credit_cards_warning_dialog_later">Ne\' rūkù doj</string>
     <!-- Title of PIN verification dialog to direct users to re-enter their device credentials to access their credit cards -->
     <string name="credit_cards_biometric_prompt_message_pin">Nā\'nïn riña si āgâ\'t</string>
-    <!-- Message displayed in biometric prompt for authentication, before allowing users to use their stored credit card information -->
-    <string name="credit_cards_biometric_prompt_unlock_message">Nā’nï̄n riñanj da’ gā’hue gārasunt nej nuguan’ màn riña si tarjetât</string>
     <!-- Title of the "Add address" screen -->
     <string name="addresses_add_address">Nūtà’ a’ngô dīreksiûn</string>
     <!-- Title of the "Edit address" screen -->
     <string name="addresses_edit_address">Nādunā sa ‘na’ riña dīreksiûn</string>
     <!-- Title of the "Manage addresses" screen -->
     <string name="addresses_manage_addresses">Ni’hiāj dàj gā nej dīreksiûn</string>
-    <!-- The header for the first name of an address -->
-    <string name="addresses_first_name">Si yūgui</string>
-    <!-- The header for the middle name of an address -->
-    <string name="addresses_middle_name">A’ngô si yūgui</string>
-    <!-- The header for the last name of an address -->
-    <string name="addresses_last_name">Sa nata\' ràt</string>
     <!-- The header for the street address of an address -->
     <string name="addresses_street_address">Hiūj nê\'t</string>
     <!-- The header for the city of an address -->
@@ -1894,8 +1668,6 @@
     <string name="addresses_cancel_button">Dūyichin\'</string>
     <!-- The text for the "Delete address" button for deleting an address -->
     <string name="addressess_delete_address_button">Nādure’ dīreksiûn</string>
-    <!-- The title for the "Delete address" confirmation dialog -->
-    <string name="addressess_confirm_dialog_message">Huā yītïnj ruhuât nādure\'t dīreksiûn nan anj.</string>
     <!-- The text for the positive button on "Delete address" dialog -->
     <string name="addressess_confirm_dialog_ok_button">Nādūre\'</string>
     <!-- The text for the negative button on "Delete address" dialog -->
@@ -1912,29 +1684,19 @@
     <string name="search_engine_add_custom_search_engine_button_content_description">Nūtà’ a’ngô sa rūgûñu’ūnj nānà’huì’t</string>
     <!-- Title of the Edit search engine screen -->
     <string name="search_engine_edit_custom_search_engine_title">Nāgi\'iaj riña sa riñā nānà\'uì\'t</string>
-    <!-- Content description (not visible, for screen readers etc.): Title for the button to add a search engine in the action bar -->
-    <string name="search_engine_add_button_content_description">Nūtà\'</string>
 
-    <!-- Content description (not visible, for screen readers etc.): Title for the button to save a search engine in the action bar -->
-    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Nā\'nïnj sà\'</string>
     <!-- Text for the menu button to edit a search engine -->
     <string name="search_engine_edit">Nāgi\'iaj riñaj</string>
     <!-- Text for the menu button to delete a search engine -->
     <string name="search_engine_delete">Nādūre\'</string>
 
-    <!-- Text for the button to create a custom search engine on the Add search engine screen -->
-    <string name="search_add_custom_engine_label_other">A\'ngoj</string>
     <!-- Label for the TextField in which user enters custom search engine name -->
     <string name="search_add_custom_engine_name_label">Si yugui</string>
-    <!-- Placeholder text shown in the Search Engine Name TextField before a user enters text -->
-    <string name="search_add_custom_engine_name_hint">Si yugui</string>
 
     <!-- Placeholder text shown in the Search Engine Name text field before a user enters text -->
     <string name="search_add_custom_engine_name_hint_2">Si yugui sa nana\'ui\'</string>
     <!-- Label for the TextField in which user enters custom search engine URL -->
     <string name="search_add_custom_engine_url_label">URL nīkāj sa nana’huî’</string>
-    <!-- Placeholder text shown in the Search String TextField before a user enters text -->
-    <string name="search_add_custom_engine_search_string_hint">Kadenâ nana\'ui\' huū gārasunt</string>
     <!-- Placeholder text shown in the Search String TextField before a user enters text -->
     <string name="search_add_custom_engine_search_string_hint_2">URL gārasunt guendâ nānà’huì’t</string>
     <!-- Description text for the Search String TextField. The %s is part of the string -->
@@ -1948,7 +1710,7 @@
     <!-- Placeholder text shown in the Search Suggestion String TextField before a user enters text -->
     <string name="search_add_custom_engine_suggest_string_hint">Si URL API atāj nùhuin sa gā’hue nāna’huì’t</string>
     <!-- Description text for the Search Suggestion String TextField. The %s is part of the string -->
-    <string name="search_add_custom_engine_suggest_string_example" formatted="false">Nādunā sa nana\’huî\’t ngà “%s”. Dàj rû\':\nhttp://suggestqueries.google.com/complete/search?client=firefox&amp;q=%s</string>
+    <string name="search_add_custom_engine_suggest_string_example_2" formatted="false">Nādunā sa gachrûnt dan ngà “%s”. Dàj rû\':\nhttps://suggestqueries.google.com/complete/search?client=firefox&amp;q=%s</string>
     <!-- The text for the "Save" button for saving a custom search engine -->
     <string name="search_custom_engine_save_button">Nā\'nïnj sà\'</string>
 
@@ -2007,31 +1769,11 @@
     <string name="login_menu_delete_button">Nādūre\'</string>
     <!-- Login overflow menu edit button -->
     <string name="login_menu_edit_button">Nāgi\'iaj riñaj</string>
-    <!-- Message in delete confirmation dialog for logins -->
-    <string name="login_deletion_confirmation">Huā yītïnj ruhuât nādure\'t riña gayì\'ìt sēsiûn nan anj</string>
     <!-- Positive action of a dialog asking to delete  -->
     <string name="dialog_delete_positive">Nādūre\'</string>
     <!-- Negative action of a dialog asking to delete login -->
     <string name="dialog_delete_negative">Dūyichin\'</string>
-    <!--  The saved login options menu description. -->
-    <string name="login_options_menu">A\'ngô sa ga\'ue gī\'iát da\' ga\'ue gāyi\'ìt sēsiûn</string>
-    <!--  The editable text field for a login's web address. -->
-    <string name="saved_login_hostname_description">Hūaj ga\'ue nāchrūnt nuguan\'an riña direksiûn web gayi\'ìt sēsiûn.</string>
-    <!--  The editable text field for a login's username. -->
-    <string name="saved_login_username_description">Hūaj ga\'ue nāchrūnt nuguan\'an riña si yūgui riña gayi\'ìt sēsiûn.</string>
-    <!--  The editable text field for a login's password. -->
-    <string name="saved_login_password_description">Hūaj ga\'ue nāchrūnt nuguan\'an riña da\'nga\' huì riña gayi\'ìt sēsiûn.</string>
-    <!--  The button description to save changes to an edited login. -->
-    <string name="save_changes_to_login">Nā\'nïnj sà\' sa nadunâ riña gayì\'ìt sēsiûn.</string>
-    <!--  The page title for editing a saved login. -->
-    <string name="edit">Nāgi\'iaj riñaj</string>
 
-    <!--  The page title for adding new login. -->
-    <string name="add_login">Nutà’ riña ayi’ì sēsiûn nākàa</string>
-    <!--  The error message in add/edit login view when password field is blank. -->
-    <string name="saved_login_password_required">Achin da\'nga\' huìi</string>
-    <!--  The error message in add login view when username field is blank. -->
-    <string name="saved_login_username_required">Dāñùn ni’ñan si yūgui si râj suun</string>
     <!--  The error message in add login view when hostname field is blank. -->
     <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Dāñùn ni’ñan si yūgui Host</string>
     <!-- Voice search button content description  -->
@@ -2083,14 +1825,14 @@
 
     <!-- Label for the preference to show the shortcuts for the most visited top sites on the homepage -->
     <string name="top_sites_toggle_top_recent_sites_4">Nānà\'uì\' a\'ngô hiūj u</string>
-	<!-- Title text displayed in the rename top site dialog. -->
-	<string name="top_sites_rename_dialog_title">Si yūgui</string>
+    <!-- Title text displayed in the rename top site dialog. -->
+    <string name="top_sites_rename_dialog_title">Si yūgui</string>
     <!-- Hint for renaming title of a shortcut -->
     <string name="shortcut_name_hint">Si yūgui aksêso dīrêkto</string>
-	<!-- Button caption to confirm the renaming of the top site. -->
-	<string name="top_sites_rename_dialog_ok">GĀ’HUE</string>
-	<!-- Dialog button text for canceling the rename top site prompt. -->
-	<string name="top_sites_rename_dialog_cancel">Dūyichin\'</string>
+    <!-- Button caption to confirm the renaming of the top site. -->
+    <string name="top_sites_rename_dialog_ok">GĀ’HUE</string>
+    <!-- Dialog button text for canceling the rename top site prompt. -->
+    <string name="top_sites_rename_dialog_cancel">Dūyichin\'</string>
 
     <!-- Text for the menu button to open the homepage settings. -->
     <string name="top_sites_menu_settings">Nādūnō’ sa huāa</string>
@@ -2128,7 +1870,7 @@
     <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. The first parameter is default search engine name. -->
     <string name="other_default_search_engine_suggestion_header">Nānà\'uì\' ngà %s</string>
 
-    <!-- Default browser experiment -->
+    <!-- Default browser card text -->
     <string name="default_browser_experiment_card_text">Nāgi’hiaj nej enlasê sitiô web, nej korrêo nī nej nuguan’ huāa da’ nāyi’nïn man’an nej man riña Firefox.</string>
 
     <!-- Content description for close button in collection placeholder. -->
@@ -2138,7 +1880,7 @@
     <string name="radio_preference_info_content_description">Gā’huì’ klik da’ gīni’înt doj sa huāa</string>
 
     <!-- Content description for the action bar "up" button -->
-    <string name="action_bar_up_description">Gāchē nun gan’ānj nāhuīt</string>
+    <string name="action_bar_up_description" moz:removedIn="124" tools:ignore="UnusedResources">Gāchē nun gan’ānj nāhuīt</string>
 
     <!-- Content description for privacy content close button -->
     <string name="privacy_content_close_button_content_description">Nārán</string>
@@ -2176,4 +1918,8 @@
     <string name="a11y_action_label_read_article">gāhiā riña ñanj dan</string>
     <!-- Action label for links to the Firefox Pocket website. Talkback will append this to say "Double tap to open link to learn more". -->
     <string name="a11y_action_label_pocket_learn_more">nā’nïn riña enlâse da’ gīni’înt doj</string>
-</resources>
+
+    <!-- Translations feature-->
+
+
+    </resources>
